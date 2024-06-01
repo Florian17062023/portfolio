@@ -1,0 +1,53 @@
+/* styles/navbar.module.css */
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(239, 229, 214);
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  .nav::before,
+  .nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    
+  }
+  
+  .nav::before {
+    top: 0;
+  }
+  
+  .nav::after {
+    bottom: 0;
+  }
+  
+  .ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .li {
+    margin: 0 15px;
+  }
+  
+  .li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease-in-out;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .li a:hover {
+    color: pink;
+  }
+  
