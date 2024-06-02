@@ -41,23 +41,15 @@ const ContactForm = () => {
         </CCol>
       </CRow>
 
-      {/* Champ de saisie pour le username */}
-      <CInputGroup className="mb-3">
-        <CInputGroupText id="basic-addon1">@</CInputGroupText>
-        <CFormInput
-          placeholder=""
-          aria-label="Username"
-          aria-describedby="basic-addon1"
-          name="username"
-        />
-      </CInputGroup>
+    
+    
 
       {/* Champ de saisie pour l'adresse email */}
       <CFormInput
         type="email"
         id="exampleFormControlInput1"
         label="Adresse mail"
-        placeholder="name@example.com"
+        placeholder="nom@exemple.com"
         aria-describedby="exampleFormControlInputHelpInline"
         className="mb-3"
         name="email"
