@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   CForm,
   CFormInput,
@@ -8,11 +8,21 @@ import {
   CFormSelect,
   CRow,
   CCol,
-  CButton
+  CButton,
 } from "@coreui/react";
 
 const ContactForm = () => {
   const [message, setMessage] = useState(null);
+
+  useEffect(() => {
+    let timer;
+    if (message) {
+      timer = setTimeout(() => {
+        setMessage(null);
+      }, 20000); // 20 secondes
+    }
+    return () => clearTimeout(timer);
+  }, [message]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,10 +34,10 @@ const ContactForm = () => {
       {/* Champ de saisie pour le nom et le prenom */}
       <CRow className="mb-4">
         <CCol xs>
-          <CFormInput placeholder="Prénom" aria-label="Prénom" />
+          <CFormInput placeholder="Prénom" aria-label="Prénom" name="prenom" />
         </CCol>
         <CCol xs>
-          <CFormInput placeholder="Nom" aria-label="Nom" />
+          <CFormInput placeholder="Nom" aria-label="Nom" name="nom" />
         </CCol>
       </CRow>
 
@@ -35,9 +45,10 @@ const ContactForm = () => {
       <CInputGroup className="mb-3">
         <CInputGroupText id="basic-addon1">@</CInputGroupText>
         <CFormInput
-          placeholder="Username"
+          placeholder=""
           aria-label="Username"
           aria-describedby="basic-addon1"
+          name="username"
         />
       </CInputGroup>
 
@@ -45,17 +56,23 @@ const ContactForm = () => {
       <CFormInput
         type="email"
         id="exampleFormControlInput1"
-        label="Email address"
+        label="Adresse mail"
         placeholder="name@example.com"
         aria-describedby="exampleFormControlInputHelpInline"
         className="mb-3"
+        name="email"
       />
 
       {/* Champ de saisie pour laliste déroulante */}
-      <CFormSelect size="sm" className="mb-3" aria-label="Small select example">
-        <option>Open this select menu</option>
-        <option value="1">Information sur un produit</option>
-        <option value="2">Commande</option>
+      <CFormSelect
+        size="sm"
+        className="mb-3"
+        aria-label="Petit menu déroulant"
+        name="subject"
+      >
+        <option value="">Ouvrir ce menu déroulant</option>
+        <option value="product_info">Information sur un produit</option>
+        <option value="order">Commande</option>
       </CFormSelect>
 
       {/* Champ de saisie pour le message */}
@@ -63,8 +80,8 @@ const ContactForm = () => {
         id="exampleFormControlTextarea1"
         label="Message"
         rows={3}
-        text="Must be 8-20 words long."
         className="mb-2"
+        name="message"
       />
 
       {/* Bouton d'envoi du formulaire */}
