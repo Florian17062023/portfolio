@@ -1,9 +1,40 @@
-import React from 'react';
-import { CForm, CFormInput, CInputGroup, CInputGroupText, CFormTextarea } from '@coreui/react';
+import React, { useState } from "react";
+import {
+  CForm,
+  CFormInput,
+  CInputGroup,
+  CInputGroupText,
+  CFormTextarea,
+  CFormSelect,
+  CRow,
+  CCol,
+  CButton
+} from "@coreui/react";
 
 const ContactForm = () => {
+  const [message, setMessage] = useState(null);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setMessage("Formulaire envoyé avec succès!");
+  };
+
   return (
-    <CForm>
+    <CForm
+      onSubmit={handleSubmit}
+      action="https://formsubmit.co/ajax/florian.srrlt@gmail.com"
+      method="POST"
+    >
+      {/* Champ de saisie pour le nom et le prenom */}
+      <CRow className="mb-4">
+        <CCol xs>
+          <CFormInput placeholder="First name" aria-label="First name" name="first_name" />
+        </CCol>
+        <CCol xs>
+          <CFormInput placeholder="Last name" aria-label="Last name" name="last_name" />
+        </CCol>
+      </CRow>
+
       {/* Champ de saisie pour le username */}
       <CInputGroup className="mb-3">
         <CInputGroupText id="basic-addon1">@</CInputGroupText>
@@ -11,6 +42,7 @@ const ContactForm = () => {
           placeholder="Username"
           aria-label="Username"
           aria-describedby="basic-addon1"
+          name="username"
         />
       </CInputGroup>
 
@@ -20,10 +52,22 @@ const ContactForm = () => {
         id="exampleFormControlInput1"
         label="Email address"
         placeholder="name@example.com"
-        text="Must be 8-20 characters long."
         aria-describedby="exampleFormControlInputHelpInline"
         className="mb-3"
+        name="email"
       />
+
+      {/* Champ de saisie pour laliste déroulante */}
+      <CFormSelect
+        size="sm"
+        className="mb-3"
+        aria-label="Small select example"
+        name="subject"
+      >
+        <option value="">Sélectionnez un sujet</option>
+        <option value="product_info">Information sur un produit</option>
+        <option value="order">Commande</option>
+      </CFormSelect>
 
       {/* Champ de saisie pour le message */}
       <CFormTextarea
@@ -31,15 +75,22 @@ const ContactForm = () => {
         label="Message"
         rows={3}
         text="Must be 8-20 words long."
-        className="mb-3"
+        className="mb-2"
+        name="message"
       />
 
       {/* Bouton d'envoi du formulaire */}
-      <button type="submit" className="btn btn-primary">
+      <CButton type="submit" color="primary">
         Envoyer
-      </button>
+      </CButton>
+
+      {message && (
+        <div className="alert alert-success" role="alert">
+          {message}
+        </div>
+      )}
     </CForm>
   );
 };
 
-export default ContactForm;
+export default ContactForm
