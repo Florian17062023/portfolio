@@ -20,18 +20,14 @@ const ContactForm = () => {
   };
 
   return (
-    <CForm
-      onSubmit={handleSubmit}
-      action="https://formsubmit.co/ajax/florian.srrlt@gmail.com"
-      method="POST"
-    >
+    <CForm onSubmit={handleSubmit}>
       {/* Champ de saisie pour le nom et le prenom */}
       <CRow className="mb-4">
         <CCol xs>
-          <CFormInput placeholder="First name" aria-label="First name" name="first_name" />
+          <CFormInput placeholder="Prénom" aria-label="Prénom" />
         </CCol>
         <CCol xs>
-          <CFormInput placeholder="Last name" aria-label="Last name" name="last_name" />
+          <CFormInput placeholder="Nom" aria-label="Nom" />
         </CCol>
       </CRow>
 
@@ -42,7 +38,6 @@ const ContactForm = () => {
           placeholder="Username"
           aria-label="Username"
           aria-describedby="basic-addon1"
-          name="username"
         />
       </CInputGroup>
 
@@ -54,19 +49,13 @@ const ContactForm = () => {
         placeholder="name@example.com"
         aria-describedby="exampleFormControlInputHelpInline"
         className="mb-3"
-        name="email"
       />
 
       {/* Champ de saisie pour laliste déroulante */}
-      <CFormSelect
-        size="sm"
-        className="mb-3"
-        aria-label="Small select example"
-        name="subject"
-      >
-        <option value="">Sélectionnez un sujet</option>
-        <option value="product_info">Information sur un produit</option>
-        <option value="order">Commande</option>
+      <CFormSelect size="sm" className="mb-3" aria-label="Small select example">
+        <option>Open this select menu</option>
+        <option value="1">Information sur un produit</option>
+        <option value="2">Commande</option>
       </CFormSelect>
 
       {/* Champ de saisie pour le message */}
@@ -76,7 +65,6 @@ const ContactForm = () => {
         rows={3}
         text="Must be 8-20 words long."
         className="mb-2"
-        name="message"
       />
 
       {/* Bouton d'envoi du formulaire */}
@@ -93,4 +81,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm
+export default ContactForm;
