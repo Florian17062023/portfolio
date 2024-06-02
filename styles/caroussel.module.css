@@ -9,8 +9,8 @@
   .carouselImage {
     max-width: 100%;
     height: auto;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     border: 2px solid gray;
     border-radius: 10px;
   }
