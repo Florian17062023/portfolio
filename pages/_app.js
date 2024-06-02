@@ -1,6 +1,6 @@
 
 import '../styles/globals.css';
-import Header from '../composents/header';
+import Header from '../composents/Header';
 import Navbar from '../composents/Navbar';
 import Footer from '../composents/Footer';
 

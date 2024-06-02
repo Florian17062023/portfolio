@@ -4,9 +4,9 @@
   justify-content: center; /* Centers the image horizontally */
   align-items: center; /* Centers the image vertically */
   height: 16vh; /* Example height */
-  background: rgb(239, 229, 214);
+  background: white;
 }
 
 .logo {
-  height: 8rem;
+  height: 13rem;
 }

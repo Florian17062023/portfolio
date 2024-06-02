@@ -1,7 +1,6 @@
-/* styles/Footer.module.css */
+/* src/styles/Footer.module.css */
 .footer {
-    background: rgb(239, 229, 214);
-    color: #fff;
+    background: white;
     text-align: center;
     padding: 10px 0;
     position: fixed;
@@ -9,10 +8,23 @@
     width: 100%;
   }
   
+  .links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
   .link {
-    margin: 0 10px;
-    color: #494848;
-    font-size: 0.95rem;
-    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    transition: transform 0.3s;
+  }
+  
+  .icon:hover {
+    transform: scale(1.1);
   }
   

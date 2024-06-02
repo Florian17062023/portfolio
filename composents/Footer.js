@@ -1,13 +1,16 @@
-// components/Footer.js
 import React from 'react';
 import styles from '../styles/footer.module.css';
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div>
-        <a href="https://facebook.com" target="_blank" className={styles.link}>Facebook</a>
-        <a href="mailto:contact@mywebsite.com" className={styles.link}>Email</a>
+      <div className={styles.links}>
+        <a href="https://www.instagram.com/chels_arts88?igsh=MW5zYXJocDU4dDE1dQ==" target="_blank" rel="noopener noreferrer" className={styles.link}>
+          <img src="/instagram.jpg" alt="Instagram" className={styles.icon} />
+        </a>
+        <a href="mailto:xx@gmail.com" className={styles.link}>
+          <img src="/email.jpg" alt="Email" className={styles.icon} />
+        </a>
       </div>
     </footer>
   );

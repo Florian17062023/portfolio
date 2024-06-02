@@ -1,0 +1,9 @@
+/* styles.css */
+
+.imageStyle{
+  max-width: 80%;
+    height: 5rem;
+    object-fit: contain;
+    border-radius: 2rem;
+    text-align: center;
+  }
