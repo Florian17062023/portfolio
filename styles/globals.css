@@ -2,9 +2,24 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
-  background:white;
+  background: white;
 }
 
 header, nav, footer {
   width: 100%;
+}
+
+
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
+
+.content-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding: 2rem; 
 }

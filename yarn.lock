@@ -9,6 +9,20 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
+"@coreui/coreui@^5.0.2":
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/@coreui/coreui/-/coreui-5.0.2.tgz#d7f1e53497e2a53fa71888e7a5dfc416bff25c5b"
+  integrity sha512-ox3nnVxEvitgSMKbn5+DXMMLWgjoRKL0fnWXwA4B4eTLhnzyYBUZZAs+xHWIGRK0/PfP6cMiliYdC4Swhw/5xQ==
+
+"@coreui/react@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@coreui/react/-/react-5.1.0.tgz#c319e17877b30a6592550a9268e0241b061506ae"
+  integrity sha512-pOx4jG++YgOuuoMycbbVDnSxoPP54ZkKvxVQH4i/h38gscHBeSj2bDk7gxA29QNg3fVUZympgXpQ16C/WU0Ikw==
+  dependencies:
+    "@coreui/coreui" "^5.0.2"
+    "@popperjs/core" "^2.11.8"
+    prop-types "^15.8.1"
+
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz#a23514e8fb9af1269d5f7788aa556798d61c6b59"
@@ -155,7 +169,7 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@popperjs/core@^2.11.6":
+"@popperjs/core@^2.11.6", "@popperjs/core@^2.11.8":
   version "2.11.8"
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==

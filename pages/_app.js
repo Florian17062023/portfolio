@@ -1,19 +1,13 @@
 
 import '../styles/globals.css';
-import Header from '../composents/Header';
-import Navbar from '../composents/Navbar';
-import Footer from '../composents/Footer';
+import '@coreui/coreui/dist/css/coreui.min.css';
+import Layout from './layout';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Header />
-      <Navbar />
-      <main>
-        <Component {...pageProps} />
-      </main>
-      <Footer />
-    </>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   );
 }
 
