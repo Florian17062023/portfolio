@@ -1,38 +1,36 @@
-import React from 'react';
-import styles from '../styles/caroussel.module.css';
+import "../styles/caroussel.module.css";
 
-const Carousel = ({ imageStyle }) => {
+function CarouselComponent() {
   return (
-    <div id="demo" className="carousel slide" data-ride="carousel">
+    <div id="demo" className="carousel slide custom-carousel" data-ride="carousel">
       {/* Indicators */}
       <ul className="carousel-indicators">
-        <li data-target="#demo" data-slide-to="0" className="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-        <li data-target="#demo" data-slide-to="2"></li>
+        <li data-target="#demo" data-slide-to={0} className="active" />
+        <li data-target="#demo" data-slide-to={1} />
+        <li data-target="#demo" data-slide-to={2} />
       </ul>
-
       {/* The slideshow */}
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <img src="/image1.jpg" alt="Los Angeles" style={imageStyle} />
+          <img src="/image1.jpg" alt="Los Angeles" className="d-block w-100 custom-img" />
         </div>
         <div className="carousel-item">
-          <img src="/image2.jpg" alt="Chicago" style={imageStyle} />
+          <img src="/image2.jpg" alt="Chicago" className="d-block w-100 custom-img" />
         </div>
         <div className="carousel-item">
-          <img src="/image3.jpg" alt="New York" style={imageStyle} />
+          <img src="/image3.jpg" alt="New York" className="d-block w-100 custom-img" />
         </div>
       </div>
-
       {/* Left and right controls */}
-      <a className="carousel-control-prev" href="#demo" data-slide="prev">
-        <span className="carousel-control-prev-icon"></span>
+      <a className="carousel-control-prev custom-control-prev" href="#demo" data-slide="prev">
+        <span className="carousel-control-prev-icon" />
       </a>
-      <a className="carousel-control-next" href="#demo" data-slide="next">
-        <span className="carousel-control-next-icon"></span>
+      <a className="carousel-control-next custom-control-next" href="#demo" data-slide="next">
+        <span className="carousel-control-next-icon" />
       </a>
     </div>
   );
-};
+}
 
-export default Carousel;
+export default CarouselComponent;
+

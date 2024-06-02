@@ -1,9 +1,28 @@
-/* styles.css */
+.custom-carousel .carousel-inner {
+  height: 5rem; /* Hauteur des images du carousel */
+}
 
-.imageStyle{
-  max-width: 80%;
-    height: 5rem;
-    object-fit: contain;
-    border-radius: 2rem;
-    text-align: center;
-  }
+.custom-carousel .custom-img {
+  object-fit: cover; /* L'image remplit complètement le conteneur */
+  height: 80%;
+  border: 5px solid #fff; /* Bordure blanche autour des images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre autour des images */
+  font-size:2rem;
+}
+
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+  background-color: #000; /* Fond des icônes de contrôle */
+  border-radius: 50%; /* Forme circulaire pour les icônes */
+  width: 50px; /* Largeur des icônes */
+  height: 50px; /* Hauteur des icônes */
+  background-size: 20%, 20%; /* Taille de l'image de fond */
+}
+
+.custom-carousel .carousel-control-prev-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M4.707 1.707L3.293.293 0 3.5l3.293 3.207 1.414-1.414L2.414 3.5z"/%3E%3C/svg%3E');
+}
+
+.custom-carousel .carousel-control-next-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23fff" viewBox="0 0 8 8"%3E%3Cpath d="M3.293 6.293L4.707 7.707 8 4.5 4.707 1.293 3.293 2.707 5.586 4.5z"/%3E%3C/svg%3E');
+}
