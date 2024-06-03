@@ -53,6 +53,72 @@ const Projets = () => {
         </CCardBody>
       </CCard>
     </CCol>
+    <CCol xs>
+      <CCard className="h-100">
+        <CCardImage orientation="top" src={'/animalcoeur.jpg'} />
+        <CCardBody>
+          <CCardTitle>Lapin rose Coeur</CCardTitle>
+          <CCardText>
+            This card has supporting text below as a natural lead-in to additional content.
+          </CCardText>
+        </CCardBody>
+      </CCard>
+    </CCol>
+    <CCol xs>
+      <CCard className="h-100">
+        <CCardImage orientation="top" src={'/souris.jpg'} />
+        <CCardBody>
+          <CCardTitle>La souris</CCardTitle>
+          <CCardText>
+            This card has supporting text below as a natural lead-in to additional content.
+          </CCardText>
+        </CCardBody>
+      </CCard>
+    </CCol>
+    <CCol xs>
+      <CCard className="h-100">
+        <CCardImage orientation="top" src={'/elephant.jpg'} />
+        <CCardBody>
+          <CCardTitle>L'elephant</CCardTitle>
+          <CCardText>
+            This card has supporting text below as a natural lead-in to additional content.
+          </CCardText>
+        </CCardBody>
+      </CCard>
+    </CCol>
+    <CCol xs>
+      <CCard className="h-100">
+        <CCardImage orientation="top" src={'/vache2.jpg'} />
+        <CCardBody>
+          <CCardTitle>La vache orange</CCardTitle>
+          <CCardText>
+            This card has supporting text below as a natural lead-in to additional content.
+          </CCardText>
+        </CCardBody>
+      </CCard>
+    </CCol>
+    <CCol xs>
+      <CCard className="h-100">
+        <CCardImage orientation="top" src={'/vachenoire.jpg'} />
+        <CCardBody>
+          <CCardTitle>La vache</CCardTitle>
+          <CCardText>
+            This card has supporting text below as a natural lead-in to additional content.
+          </CCardText>
+        </CCardBody>
+      </CCard>
+    </CCol>
+    <CCol xs>
+      <CCard className="h-100">
+        <CCardImage orientation="top" src={'/tigre.jpg'} />
+        <CCardBody>
+          <CCardTitle>Le tigre</CCardTitle>
+          <CCardText>
+            This card has supporting text below as a natural lead-in to additional content.
+          </CCardText>
+        </CCardBody>
+      </CCard>
+    </CCol>
   </CRow>
   );
 };

@@ -10,6 +10,7 @@
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);  
 }
 
 .textContent {
@@ -72,4 +73,8 @@
   line-height: 1.5;
   text-align: center; /* Centrer le texte */
   margin-bottom: 2.5rem;
+}
+
+.animate__animated.animate__bounce {
+  --animate-duration: 3s;
 }

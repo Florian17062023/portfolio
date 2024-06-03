@@ -1,13 +1,14 @@
 import React from 'react';
 import { CCarousel, CCarouselItem, CCarouselCaption, CImage } from '@coreui/react';
 import styles from '../styles/caroussel.module.css';
+import 'animate.css';
 
 const Caroussel = () => {
   return (
     <div className={styles.container}>
       <div className={styles.textContent}>
-        <h2 className={styles.carousselTitle}>Chels_arts88</h2>
-        <p className={styles.carousselDescription}>Texte d'explication du carrousel</p>
+        <h2 className={`${styles.carousselTitle} animate__animated animate__zoomIn`}>Chels_arts88</h2>
+        <p className={`${styles.carousselDescription} animate__animated animate__zoomIn`}>Texte d'explication du carrousel</p>
       </div>
       <div className={styles.carouselContainer}>
         <CCarousel controls indicators dark>

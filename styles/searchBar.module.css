@@ -1,0 +1,27 @@
+.searchContainer {
+    display: flex;
+    align-items: center;
+    background-color: #f2f2f2;
+    border-radius: 16px; /* Réduisez la valeur pour un rayon plus petit */
+    padding: 4px 8px; /* Réduisez les valeurs de padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .searchInput {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 12px; /* Réduisez la taille de la police */
+    padding: 6px; /* Réduisez la valeur de padding */
+  }
+  
+  .searchButton {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px; /* Réduisez la taille de la police */
+    color: #666;
+    padding: 6px; /* Réduisez la valeur de padding */
+  }

@@ -1,8 +1,8 @@
 /* Styles pour la carte */
 .card {
-    border: 1px solid #ccc; /* Bordure de la carte */
+    border: 1.5px solid #ccc; /* Bordure de la carte */
     border-radius: 8px; /* Coins arrondis */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Ombre */
   }
   
   .card:hover {

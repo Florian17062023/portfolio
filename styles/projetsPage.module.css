@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .searchBarContainer {
+    width: 100%;
+    max-width: 400px; /* Réduisez la largeur maximale */
+    margin-bottom: 40px;
+  }
+
+  .projetsContainer {
+    width: 100%;
+    max-width: 200rem;
+  }
