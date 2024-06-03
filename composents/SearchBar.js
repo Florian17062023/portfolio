@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../styles/searchBar.module.css';
 
 const SearchBar = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState('');
-
   const handleChange = (e) => {
-    setSearchTerm(e.target.value);
     onSearch(e.target.value);
   };
 
@@ -14,7 +11,6 @@ const SearchBar = ({ onSearch }) => {
       <input
         type="text"
         placeholder="Rechercher un projet..."
-        value={searchTerm}
         onChange={handleChange}
         className={styles.searchInput}
       />
