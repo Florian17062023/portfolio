@@ -1,6 +1,6 @@
 /* src/styles/Footer.module.css */
 .footer {
-    background: white;
+    background: rgba(211, 48, 48, 0);
     text-align: center;
     padding: -3rem 0;
     position: sticky;

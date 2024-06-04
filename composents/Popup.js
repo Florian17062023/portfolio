@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CCard, CCardImage, CCardBody, CCardTitle, CCardText } from '@coreui/react';
 import { motion } from 'framer-motion';
 import styles from '../styles/popupStyle.module.css';
 
 const ProductPopup = ({ item, onClose }) => {
+  const [showFullDescription, setShowFullDescription] = useState(false);
+  const maxDescriptionLength = 100; // Nombre maximum de caractères à afficher initialement
+
+  const toggleDescription = () => {
+    setShowFullDescription(!showFullDescription);
+  };
+
   return (
     <motion.div
       layoutId={`card-${item.id}`}
@@ -25,7 +32,14 @@ const ProductPopup = ({ item, onClose }) => {
         <div className={styles.contentContainer}>
           <CCardBody className={styles['card-body']}>
             <CCardTitle className={styles['card-title']}>{item.title}</CCardTitle>
-            <CCardText className={styles['card-text']}>{item.description}</CCardText>
+            <CCardText className={styles['card-text']}>
+              {showFullDescription ? item.description : `${item.description.slice(0, maxDescriptionLength)}...`}
+              {item.description.length > maxDescriptionLength && (
+                <span className={styles.readMoreButton} onClick={toggleDescription}>
+                  {showFullDescription ? ' Voir moins' : ' Voir la suite'}
+                </span>
+              )}
+            </CCardText>
             <div>
               <label htmlFor="quantity">Quantité :</label>
               <select id="quantity" name="quantity">

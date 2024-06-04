@@ -1,80 +1,69 @@
-/* caroussel.module.css */
-
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  background: linear-gradient(to bottom, #ffe6e6, #ffd7d7); /* Gradient rose pastel-crème */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 100%;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);  
-}
-
-.textContent {
-  flex-basis: 70%;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.containerRose {
+  width: 100rem;
+  background: linear-gradient(to bottom, #ffe6e6, #ffd7d7);
+  padding: 2rem 0;
+  height: 33rem;
+  display: flex; /* Ajout de cette ligne */
+  justify-content: center; /* Ajout de cette ligne */
 }
 
 .carouselContainer {
-  flex-basis: 50%;
-  height: 600px;
-  width: 1050px;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  background: linear-gradient(to bottom, #ffe6e6, #ffd7d7);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex; /* Ajout de cette ligne */
+  justify-content: center; /* Ajout de cette ligne */
+  align-items: center; /* Ajout de cete ligne */
 }
 
 .carouselImage {
-  width: 550px;
-  height: 575px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
-  border: 2px solid gray;
-  border-radius: 10px;
-  position: relative;
-  top: 20%; /* Remonte l'image de 50% de sa hauteur */
-  
+  border-radius: 8px;
 }
 
-.carouselIndicators {
+/* Styles pour les flèches de navigation */
+.splide__arrows {
+  display: flex;
+  justify-content: space-between;
   margin-top: 1rem;
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
-.carousselTitle {
-  font-size: 2.1rem;
-  font-weight: bold;
-  color: #9c9898;;
-  margin-bottom: 1rem; /* Espacement sous le titre */
-  font-weight: bold;
-  text-shadow: -1px -1px 0 #fff,  
-  1px -1px 0 #fff,
-  -1px 1px 0 #fff,
-  1px 1px 0 #fff;;
-  margin-top: -25rem;
+.splide__arrow {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.carousselDescription {
-  font-size: 1.2rem;
-  color: #666;
-  line-height: 1.5;
-  text-align: center; /* Centrer le texte */
-  margin-bottom: 2.5rem;
+.splide__arrow:hover {
+  background-color: #555;
 }
 
-.animate__animated.animate__bounce {
-  --animate-duration: 3s;
+/* Styles pour les points de pagination */
+.splide__pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
+
+.splide__pagination__page {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.splide__pagination__page.is-active {
+  background-color: #333;
+}
+
+

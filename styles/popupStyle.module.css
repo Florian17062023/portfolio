@@ -38,8 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 100%;
+    width: 50rem;
   }
   
   .card-img-top {
@@ -89,3 +88,9 @@
     margin-top: 1rem;
     cursor: pointer;
   }
+  .readMoreButton {
+    color: rgb(189, 108, 137);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
