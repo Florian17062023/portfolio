@@ -38,13 +38,13 @@ const Navbar = () => {
           </CSidebarBrand>
         </CSidebarHeader>
         <CSidebarNav>
-          <CNavItem href="#" className={styles.navItem} activeClassName={styles.activeNavItem}>
+          <CNavItem href="#" className={styles.navItem} activeclassname={styles.activeNavItem}>
             <CIcon customClassName="nav-icon" size="sm" /> Acceuil
           </CNavItem>
-          <CNavItem href="#about" className={styles.navItem} activeClassName={styles.activeNavItem}>
+          <CNavItem href="#about" className={styles.navItem} activeclassname={styles.activeNavItem}>
             <CIcon customClassName="nav-icon" size="sm" /> About
           </CNavItem>
-          <CNavItem href="#projects" className={styles.navItem} activeClassName={styles.activeNavItem}>
+          <CNavItem href="#projects" className={styles.navItem} activeclassname={styles.activeNavItem}>
             <CIcon customClassName="nav-icon" size="sm" /> Projets
           </CNavItem>
         </CSidebarNav>
