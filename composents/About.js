@@ -6,18 +6,14 @@ const About = () => {
   return (
     <div className={styles.container}>
       <div className={styles.leftContent}>
-        <h2 className={styles.title}>À propos de moi</h2>
+        <h2 className={styles.title}>About</h2>
         <p className={styles.paragraph}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis libero in orci fringilla, auctor eleifend odio rutrum. 
-          Mauris ac sapien a arcu tincidunt malesuada. Integer id felis dui. Sed euismod nunc id odio tincidunt rhoncus.
+        Ayant développé une passion pour le développement depuis ces derniers mois, je cherche une première expérience professionnelle pour mettre en pratique les compétences que j'ai acquises lors de ces derniers mois et apprendre le métier de développeur web et mobile.
         </p>
-        <p className={styles.paragraph}>
-          Vestibulum fermentum urna eu ipsum consectetur, vel elementum justo faucibus. Integer non odio id risus sollicitudin iaculis a id lorem.
-          Cras ac urna suscipit, vestibulum magna vel, dapibus lacus.
-        </p>
+        
       </div>
       <div className={styles.rightContent}>
-        <img src="/profiles.jpg" alt="Profile" />
+        <img src="/profiles.JPG" alt="Profile" />
       </div>
     </div>
   );

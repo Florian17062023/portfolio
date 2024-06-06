@@ -14,6 +14,16 @@
   resolved "https://registry.yarnpkg.com/@coreui/coreui/-/coreui-5.0.2.tgz#d7f1e53497e2a53fa71888e7a5dfc416bff25c5b"
   integrity sha512-ox3nnVxEvitgSMKbn5+DXMMLWgjoRKL0fnWXwA4B4eTLhnzyYBUZZAs+xHWIGRK0/PfP6cMiliYdC4Swhw/5xQ==
 
+"@coreui/icons-react@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@coreui/icons-react/-/icons-react-2.2.1.tgz#4d2ee7836c3e555acb3dd0b2f676af2d651a7b0c"
+  integrity sha512-44bdKV5fZpVRpY6M7AL15tSAB2S4/xFzAojMsYe9k46mjyX7QLAKoowioEtLXxOqCRUBBBgxAXyjvJeeJlZwxg==
+
+"@coreui/icons@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@coreui/icons/-/icons-3.0.1.tgz#a6b77a3d3578a59b08474fbfe29de0ebc5ea4c80"
+  integrity sha512-u9UKEcRMyY9pa4jUoLij8pAR03g5g6TLWV33/Mx2ix8sffyi0eO4fLV8DSTQljDCw938zt7KYog5cVKEAJUxxg==
+
 "@coreui/react@^5.1.0":
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/@coreui/react/-/react-5.1.0.tgz#c319e17877b30a6592550a9268e0241b061506ae"
@@ -1992,6 +2002,11 @@ react-dom@^18:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
 
+react-icons@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.2.1.tgz#28c2040917b2a2eda639b0f797bff1888e018e4a"
+  integrity sha512-zdbW5GstTzXaVKvGSyTaBalt7HSfuK5ovrzlpyiWHAFXndXTdd/1hdDHI4xBM1Mn7YriT6aqESucFl9kEXzrdw==
+
 react-is@^16.13.1, react-is@^16.3.2:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -2424,6 +2439,11 @@ typed-array-length@^1.0.6:
     has-proto "^1.0.3"
     is-typed-array "^1.1.13"
     possible-typed-array-names "^1.0.0"
+
+typed.js@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/typed.js/-/typed.js-2.1.0.tgz#b97a06111a5f57d6a59acfdd36d4f9b891ee13b4"
+  integrity sha512-bDuXEf7YcaKN4g08NMTUM6G90XU25CK3bh6U0THC/Mod/QPKlEt9g/EjvbYB8x2Qwr2p6J6I3NrsoYaVnY6wsQ==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"

@@ -1,18 +1,9 @@
+/* src/styles/homepage.module.css */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
   
-  .searchBarContainer {
-    width: 100%;
-    max-width: 400px; /* Réduisez la largeur maximale */
-    margin-bottom: 40px;
-  }
+  width: 110%;
+}
 
-  .projetsContainer {
-    width: 100%;
-    max-width: 200rem;
-  }
-  
+#about, #projects, #saturnEffect  {
+  width: 100%;
+}

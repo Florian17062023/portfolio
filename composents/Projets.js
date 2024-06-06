@@ -1,137 +1,60 @@
 import React, { useState } from 'react';
-import { CRow, CCol, CCard, CCardImage, CCardBody, CCardTitle, CCardText, CPagination, CPaginationItem } from '@coreui/react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { CRow, CCol, CCard, CCardImage, CCardBody, CCardTitle, CCardText, CButton } from '@coreui/react';
+import { FiChevronDown } from 'react-icons/fi';
 import styles from '../styles/projets.module.css';
-import ProductPopup from './Popup';
-import FilterSearch from './FilterSearch';
 
-const Projets = ({ searchTerm }) => {
-  const [selectedId, setSelectedId] = React.useState(null);
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [activePage, setActivePage] = useState(1);
-  const itemsPerPage = 10;
-
+const Projets = () => {
   const items = [
-    { id: 1, title: 'Le panda', image: '/panda.jpg', category: 'Animaux', description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.' },
-    { id: 2, title: 'Le cochon', image: '/cochon.jpg', category: 'Animaux', description: 'This card has supporting text below as a natural lead-in to additional content.' },
-    { id: 3, title: 'Le dragon', image: '/dragon2.jpg', category: 'Animaux', description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.' },
-    { id: 4, title: 'Le lapin', image: '/lapin.jpg', category: 'Animaux', description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.' },
-    { id: 5, title: 'Lapin rose Coeur', image: '/animalcoeur.jpg', category: 'Animaux', description: 'This card has supporting text below as a natural lead-in to additional content.' },
-    { id: 6, title: 'La souris', image: '/souris.jpg', category: 'Animaux', description: 'This card has supporting text below as a natural lead-in to additional content.' },
-    { id: 7, title: "L'elephant", image: '/elephant.jpg', category: 'Animaux', description: 'This card has supporting text below as a natural lead-in to additional content.' },
-    { id: 8, title: 'La vache orange', image: '/vache2.jpg', category: 'Animaux', description: 'This card has supporting text below as a natural lead-in to additional content.' },
-    { id: 9, title: 'La vache', image: '/vachenoire.jpg', category: 'Animaux', description: 'This card has supporting text below as a natural lead-in to additional content.' },
-    { id: 10, title: 'Le tigre', image: '/tigre.jpg', category: 'Animaux', description: 'This card has supporting text below as a natural lead-in to additional content.' },
-    { id: 11, title: 'Sac', image: '/sac.JPG', category: 'Accessoires', description: 'This card has supporting text below as a natural lead-in to additional content.' },
-    { id: 12, title: 'Maillot Blanc', image: '/maillotBlanc.JPG', category: 'Vetements', description: 'This card has supporting text below as a natural lead-in to additional content.' },
-    { id: 13, title: 'Maillot Bleu', image: '/maillotBleu.JPG', category: 'Vetements', description: 'This card has supporting text below as a natural lead-in to additional content.' },
-    { id: 14, title: 'Tshirt Plage', image: '/tshirtplage.JPG', category: 'Vetements', description: 'This card has supporting text below as a natural lead-in to additional content.' },
-    { id: 15, title: 'Haut Rose', image: '/hautRose.JPG', category: 'Vetements', description: 'This card has supporting text below as a natural lead-in to additional content.' },
+    { id: 1, title: 'Mymoviz', image: '/Mymoviz.PNG', description: "My Moviz est un projet d'appel API pour l'affichage des dernières sorties. Il permet à l'utilisateur d'ajouter des films à une liste de favoris et de les noter.", url: 'https://my-moviz-three.vercel.app/' },
+    { id: 2, title: 'ChelsArt', image: '/ChelsArt88.PNG', description: "Chels Art est un site vitrine présentant des créations crochet. Les utilisateurs peuvent découvrir divers projets artistiques.", url: 'https://chelsart88.vercel.app/' },
+    { id: 3, title: 'CryptoDashboard', image: '/CryptoDashboard.PNG', description: "CryptoDashboard est une plateforme en ligne pour suivre l'évolution des portefeuilles cryptographiques, offrant une vision complète des investissements.", video: '/CryptoDashBoard.mp4' },
+    { id: 4, title: 'Locapic', image: '/locapic.PNG', description: "Le projet 'Locapic' est une application de géolocalisation qui a pour but d'enregister les différentes localisations de l'utilisateur.", video: '/locapic_demo.mp4' },
   ];
 
-  const filteredItems = items.filter((item) =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const [expandedDescriptions, setExpandedDescriptions] = useState({});
 
-  const startIndex = (activePage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const itemsToDisplay = filteredItems
-    .filter((item) => {
-      if (!selectedCategory) return true;
-      return item.category === selectedCategory;
-    })
-    .slice(startIndex, endIndex);
-
-  const handleClosePopup = () => {
-    setSelectedId(null);
+  const handleDemoClick = (url) => {
+    window.open(url, '_blank');
   };
 
-  const handlePageChange = (page) => {
-    setActivePage(page);
-  };
-
-  const handleCategorySelect = (category) => {
-    setSelectedCategory(category);
+  const toggleDescription = (id) => {
+    setExpandedDescriptions({
+      ...expandedDescriptions,
+      [id]: !expandedDescriptions[id],
+    });
   };
 
   return (
-    <>
-      <div>
-        <FilterSearch onCategorySelect={handleCategorySelect} />
-        <CRow xs={{ cols: 1 }} md={{ cols: 3 }} className="g-4">
-          {itemsToDisplay.map((item) => (
-            <CCol xs key={item.id}>
-              <motion.div
-                layoutId={`card-${item.id}`}
-                onClick={() => setSelectedId(item.id)}
-                style={{ cursor: 'pointer' }}
-              >
-                <CCard className={`h-100 ${styles.card}`}>
-                  <CCardImage orientation="top" src={item.image} className={styles['card-img-top']} />
-                  <CCardBody className={styles['card-body']}>
-                    <CCardTitle className={styles['card-title']}>{item.title}</CCardTitle>
-                    <CCardText className={styles['card-text']}>{item.description.slice(0, 50)}...</CCardText>
-                  </CCardBody>
-                </CCard>
-              </motion.div>
-            </CCol>
-          ))}
-        </CRow>
-      </div>
-
-      <div className={styles['pagination-container']}>
-        <CPagination
-          aria-label="Exemple de navigation de page"
-          activePage={activePage}
-          pages={Math.ceil(
-            filteredItems.filter((item) => {
-              if (!selectedCategory) return true;
-              return item.category === selectedCategory;
-            }).length / itemsPerPage
-          )}
-          onActivePageChange={handlePageChange}
-        >
-          <CPaginationItem aria-label="Précédent" disabled={activePage === 1}>
-            <span aria-hidden="true">«</span>
-          </CPaginationItem>
-          {Array.from(
-            {
-              length: Math.ceil(
-                filteredItems.filter((item) => {
-                  if (!selectedCategory) return true;
-                  return item.category === selectedCategory;
-                }).length / itemsPerPage
-              )
-            },
-            (_, i) => (
-              <CPaginationItem key={i + 1} active={i + 1 === activePage} onClick={() => handlePageChange(i + 1)}>
-                {i + 1}
-              </CPaginationItem>
-            )
-          )}
-          <CPaginationItem
-            aria-label="Suivant"
-            disabled={
-              activePage ===
-              Math.ceil(
-                filteredItems.filter((item) => {
-                  if (!selectedCategory) return true;
-                  return item.category === selectedCategory;
-                }).length / itemsPerPage
-              )
-            }
-          >
-            <span aria-hidden="true">»</span>
-          </CPaginationItem>
-        </CPagination>
-      </div>
-
-      <AnimatePresence>
-        {selectedId && (
-          <ProductPopup item={items.find((item) => item.id === selectedId)} onClose={handleClosePopup} />
-        )}
-      </AnimatePresence>
-    </>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Projets</h1>
+      <CRow xs={{ cols: 1 }} md={{ cols: 3 }} className="g-4">
+        {items.map((item) => (
+          <CCol xs key={item.id}>
+            <CCard className={`h-100 ${styles.card}`}>
+              {item.image && (
+                <CCardImage orientation="top" src={item.image} className={styles['card-img-top']} />
+              )}
+              <CCardBody className={styles['card-body']}>
+                <CCardTitle className={styles['card-title']}>{item.title}</CCardTitle>
+                <div className={styles.descriptionContainer}>
+                  <CCardText className={`${styles['card-text']} ${expandedDescriptions[item.id] ? styles.expanded : ''}`}>
+                    {item.description}
+                  </CCardText>
+                  {item.description.length > 100 && (
+                    <div className={styles.toggleDescription} onClick={() => toggleDescription(item.id)}>
+                      <FiChevronDown />
+                    </div>
+                  )}
+                </div>
+                <CButton className={styles.demoButton} onClick={() => handleDemoClick(item.video || item.url)}>
+                  Demo
+                </CButton>
+              </CCardBody>
+            </CCard>
+          </CCol>
+        ))}
+      </CRow>
+    </div>
   );
 };
 

@@ -1,53 +1,62 @@
-/* styles/navbar.module.css */
-.nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    padding: 10px 0;
-    position: relative;
-  }
-  
-  .nav::before,
-  .nav::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 2px;
-    
-  }
-  
-  .nav::before {
-    top: 0;
-  }
-  
-  .nav::after {
-    bottom: 0;
-  }
-  
-  .ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .li {
-    margin: 0 15px;
-  }
-  
-  .li a {
-    text-decoration: none;
-    color: #494848;;
-    padding: 10px 15px;
-    display: block;
-    transition: color 0.3s ease-in-out;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
-  .li a:hover {
-    color: rgba(243, 208, 220);
-  }
-  
+.heroSection {
+  display: flex;
+  height: 100vh;
+  background-image: url('/backportfolio.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.sidebar {
+  border: none;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebarFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  margin: 0 5px; /* Espace entre les icônes */
+}
+
+.navItem {
+  margin-bottom: 1rem;
+  padding: 1rem 2rem;
+}
+
+.navItem:hover {
+  color: yellow; /* Changement de couleur au survol */
+}
+
+.activeNavItem {
+  color: #fff;
+}
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+}
+
+.typedText {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo{
+  width: 70px; /* Taille du logo */
+  height: 50%; /* Pour conserver les proportions */
+  margin-left:100%; /* Centrer le logo horizontalement */
+}
