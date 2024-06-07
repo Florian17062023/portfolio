@@ -51,7 +51,7 @@ const Navbar = () => {
           </CNavItem>
         </CSidebarNav>
         <div className={styles.sidebarFooter}>
-          <a href="https://www.linkedin.com/in/florian-serrault-509b8969?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/florian-serrault-509b8969/" target="_blank" rel="noopener noreferrer">
             <img src="/linkedin.png" alt="LinkedIn" className={styles.icon} />
           </a>
           <a href="https://github.com/Florian17062023" target="_blank" rel="noopener noreferrer">
