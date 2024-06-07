@@ -13,7 +13,7 @@ const About = () => {
         
       </div>
       <div className={styles.rightContent}>
-        <img src="/profiles.JPG" alt="Profile" />
+        <img src="/profiles.jpg" alt="Profile" />
       </div>
     </div>
   );
