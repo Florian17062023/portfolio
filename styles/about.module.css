@@ -44,4 +44,23 @@
     line-height: 1.75;
     color: #666; /* Example color */
   }
+
+  .button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #7099c6bf;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    width:4.5rem;
+  }
+  
+  .button:hover {
+    background-color: #e4e5e6;
+  }
+  
   

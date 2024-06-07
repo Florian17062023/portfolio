@@ -12,6 +12,7 @@ const About = () => {
           en pratique les compétences que j'ai acquises lors de ces derniers
           mois et apprendre le métier de développeur web et mobile.
         </p>
+        <button className={styles.button}><a href="/CV Florian Serrault.pdf" target="_blank" rel="noopener noreferrer">CV</a></button>
       </div>
       <div className={styles.rightContent}>
         <img src="/profiles.jpg" alt="Profile" />
