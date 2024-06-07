@@ -4,32 +4,38 @@
   margin: 2.2 auto;
   text-align: center;
   margin-top: 9.35rem;
+  background-color: #000000; /* Fond noir mat */
 }
 
 .title {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  color: #ffffff; /* Texte blanc */
+  margin-top: 3rem; /* Ajoutez cette ligne pour faire descendre le titre */
 }
 
 .card {
-  border: 1px solid #ccc;
+  border: 3.4px solid rgba(45, 77, 179, 1); /* Couleur des bordures */
   border-radius: 12px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   height: 100%;
+  background-color: #000000; /* Fond noir pour les cartes */
+  transition: all 0.3s ease; /* Transition pour l'effet d'agrandissement/rétrécissement */
 }
 
 .card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
+  border-color: rgba(66, 133, 244, 0.8); /* Changement de couleur au survol */
 }
 
 .card-img-top {
   object-fit: cover;
   border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  border-top-right-radius: 9.2px;
   width: 100%;
   height: 200px;
 }
@@ -45,18 +51,16 @@
   font-size: 1.25rem;
   font-weight: bold;
   text-align: center;
+  color: #ffffff; /* Texte blanc */
 }
 
 .card-text {
-  color: #666;
+  color: #ffffff;
   font-size: 1rem;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  max-height: 60px;
-}
-
-.card-text.expanded {
-  max-height: none;
+  max-height: none; /* Supprimer la hauteur maximale pour afficher tout le texte */
+  white-space: pre-wrap; /* Ajout pour gérer les sauts de ligne */
 }
 
 .descriptionContainer {
@@ -66,47 +70,53 @@
   flex-grow: 1;
 }
 
-.toggleDescription {
-  cursor: pointer;
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-.toggleDescription svg {
-  font-size: 1.5rem;
-  transition: transform 0.3s ease;
-}
-
-.toggleDescription:hover svg {
-  transform: rotate(180deg);
-}
-
 .demoButton {
   margin-top: auto;
   align-self: center;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: rgba(66, 133, 244, 1);
+  border-color: rgba(66, 133, 244, 1);
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  border-radius: 4px;
+  border-radius: 8px;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .demoButton:hover {
-  background-color: #0056b3;
-  border-color: #004085;
+  background-color: rgba(66, 133, 244, 0.8);
+  border-color: rgba(66, 133, 244, 0.8);
   transform: translateY(-2px);
 }
 
 .demoButton:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(66, 133, 244, 0.5);
 }
 
 .demoButton:active {
-  background-color: #004085;
-  border-color: #003768;
+  background-color: rgba(66, 133, 244, 0.6);
+  border-color: rgba(66, 133, 244, 0.6);
   transform: translateY(0);
+}
+
+.opened {
+  /* Styles pour le projet ouvert */
+  border: 2px solid blue; /* Par exemple */
+  margin-bottom: 20px; /* Ajoutez un espace entre les projets ouverts */
+}
+
+.opened .card {
+  /* Styles pour la carte du projet ouvert */
+  height: auto; /* Ajuste la hauteur de la carte */
+  padding-bottom: 20px; /* Ajoutez un espace entre la carte et le bouton Demo */
+}
+
+.opened .card-body {
+  /* Styles pour le corps de la carte du projet ouvert */
+  padding-bottom: 20px; /* Ajoutez un espace entre le corps de la carte et le bouton Demo */
+}
+
+.opened .demoButton {
+  /* Styles pour le bouton Demo du projet ouvert */
+  margin-top: 20px; /* Ajoutez un espace entre le bouton Demo et la carte */
 }
