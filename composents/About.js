@@ -17,6 +17,7 @@ const About = () => {
             href="/CV Florian Serrault.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            className={styles.link}
           >
             Télécharger mon CV
           </a>

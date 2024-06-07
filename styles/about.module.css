@@ -69,3 +69,12 @@
   }
   
   
+  .link {
+    display: block;
+    padding: 10px 20px;
+    color: white; /* Couleur du texte en blanc */
+    text-decoration: none;
+    text-align: center;
+    width: auto; /* Ajustement de la largeur automatique */
+  }
+  
