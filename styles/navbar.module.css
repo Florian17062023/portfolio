@@ -1,7 +1,7 @@
 .heroSection {
   display: flex;
   height: 100vh;
-  background-image: url('/backportfolio.jpg');
+  background-image: url('/Backportfolio.jpg');
   background-size: cover;
   background-position: center;
 }

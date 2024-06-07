@@ -6,7 +6,7 @@ import styles from '../styles/projets.module.css';
 const Projets = () => {
   const items = [
     { id: 1, title: 'Mymoviz', image: '/Mymoviz.PNG', description: "My Moviz est un projet d'appel API pour l'affichage des dernières sorties. Il permet à l'utilisateur d'ajouter des films à une liste de favoris et de les noter.", url: 'https://my-moviz-three.vercel.app/' },
-    { id: 2, title: 'ChelsArt', image: '/ChelsArt88.PNG', description: "Chels Art est un site vitrine présentant des créations crochet. Les utilisateurs peuvent découvrir divers projets artistiques.", url: 'https://chelsart88.vercel.app/' },
+    { id: 2, title: 'ChelsArt', image: '/ChelsArt88.png', description: "Chels Art est un site vitrine présentant des créations crochet. Les utilisateurs peuvent découvrir divers projets artistiques.", url: 'https://chelsart88.vercel.app/' },
     { id: 3, title: 'CryptoDashboard', image: '/CryptoDashboard.PNG', description: "CryptoDashboard est une plateforme en ligne pour suivre l'évolution des portefeuilles cryptographiques, offrant une vision complète des investissements.", video: '/CryptoDashBoard.mp4' },
     { id: 4, title: 'Locapic', image: '/locapic.PNG', description: "Le projet 'Locapic' est une application de géolocalisation qui a pour but d'enregister les différentes localisations de l'utilisateur.", video: '/locapic_demo.mp4' },
   ];
