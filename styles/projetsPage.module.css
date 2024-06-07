@@ -1,7 +1,7 @@
 /* src/styles/homepage.module.css */
 .container {
   
-  width: 110%;
+  width: 100%;
 }
 
 #about, #projects, #saturnEffect {

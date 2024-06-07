@@ -29,16 +29,30 @@
 }
 
 .navItem {
-  margin-bottom: 1rem;
-  padding: 1rem 2rem;
+  margin-bottom: 1.25rem;
+  padding: 2rem 3rem;
+  background: none; /* Pas de fond */
 }
 
-.navItem:hover {
-  color: yellow; /* Changement de couleur au survol */
+.navItem span {
+  color: transparent; /* Texte transparent pour appliquer le dégradé */
+  background: linear-gradient(45deg, #00a8ff, #9c27b0);
+  -webkit-background-clip: text; /* Appliquer le dégradé au texte */
+  background-clip: text;
 }
 
-.activeNavItem {
-  color: #fff;
+.navItem:hover span {
+  color: whitesmoke; /* Changement de couleur au survol */
+  background: none;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.activeNavItem span {
+  color: transparent;
+  background: linear-gradient(45deg, #00a8ff, #9c27b0); /* Appliquer le dégradé pour l'onglet actif */
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .heroContent {
@@ -55,8 +69,8 @@
   color: #fff;
 }
 
-.logo{
+.logo {
   width: 70px; /* Taille du logo */
   height: 50%; /* Pour conserver les proportions */
-  margin-left:100%; /* Centrer le logo horizontalement */
+  margin-left: 100%; /* Centrer le logo horizontalement */
 }

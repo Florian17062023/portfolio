@@ -40,25 +40,30 @@
   
   .paragraph {
     /* Styles for p */
-    font-size: 20px;
-    line-height: 1.75;
+    font-size: 16px;
+    line-height: 1.45;
     color: black; /* Example color */
+    padding-top: 1.5rem;
   }
 
   .button {
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
-    background-color:  rgba(66, 133, 244, 1);
-    color: #fff;
+    background: linear-gradient(45deg, #00a8ff, #9c27b0);
+    color: white; /* Couleur du texte en blanc */
     border: none;
     border-radius: 8px;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    width:4.5rem;
+    width: auto; /* Ajustement de la largeur automatique */
   }
   
+  .button a {
+    color: white; /* Couleur du texte du lien en blanc */
+    text-decoration: none; /* Supprime le soulignement du lien */
+  }
   .button:hover {
     background-color: #e4e5e6;
   }

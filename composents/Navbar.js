@@ -32,20 +32,22 @@ const Navbar = () => {
     <div className={styles.heroSection}>
       <CSidebar className={`border-end ${styles.sidebar}`} colorScheme="dark">
         <CSidebarHeader className="border-bottom">
-          {/* Utilisation de CSidebarBrand pour afficher le logo */}
           <CSidebarBrand>
             <img src="/logo.png" alt="Logo" className={styles.logo} />
           </CSidebarBrand>
         </CSidebarHeader>
         <CSidebarNav>
           <CNavItem href="#" className={styles.navItem} activeclassname={styles.activeNavItem}>
-            <CIcon customClassName="nav-icon" size="sm" /> Acceuil
+            <CIcon customClassName="nav-icon" size="sm" />
+            <span>Home</span>
           </CNavItem>
           <CNavItem href="#about" className={styles.navItem} activeclassname={styles.activeNavItem}>
-            <CIcon customClassName="nav-icon" size="sm" /> About
+            <CIcon customClassName="nav-icon" size="sm" />
+            <span>About</span>
           </CNavItem>
           <CNavItem href="#projects" className={styles.navItem} activeclassname={styles.activeNavItem}>
-            <CIcon customClassName="nav-icon" size="sm" /> Projets
+            <CIcon customClassName="nav-icon" size="sm" />
+            <span>Projects</span>
           </CNavItem>
         </CSidebarNav>
         <div className={styles.sidebarFooter}>
