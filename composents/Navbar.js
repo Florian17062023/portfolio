@@ -15,7 +15,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const options = {
-      strings: ['Bienvenue sur mon portfolio', 'Je suis Florian ....', 'Je suis developpeur'],
+      strings: ['Bienvenue sur mon portfolio', 'Je suis Florian ....', 'Je suis développeur FullStack'],
       typeSpeed: 50,
       backSpeed: 25,
       loop: true,

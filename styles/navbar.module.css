@@ -39,6 +39,8 @@
   background: linear-gradient(45deg, #00a8ff, #9c27b0);
   -webkit-background-clip: text; /* Appliquer le dégradé au texte */
   background-clip: text;
+  font-size: 1.25rem;
+  justify-content: center;
 }
 
 .navItem:hover span {
@@ -64,7 +66,7 @@
 }
 
 .typedText {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #fff;
 }

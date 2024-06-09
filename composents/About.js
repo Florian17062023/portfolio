@@ -1,27 +1,32 @@
 import React from "react";
+import { CButton } from "@coreui/react";
 import styles from "../styles/about.module.css";
 
 const About = () => {
+
+  const handleCVClick = () => {
+    console.log('Button clicked');
+    window.open('/CVFlorianSerrault.pdf', '_blank');
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.leftContent}>
         <h2 className={styles.title}>About</h2>
         <p className={styles.paragraph}>
-          Après presque une décennie enrichissante dans le monde de la finance, où j'ai pu travailler avec différents acteurs majeurs de l'entreprise, j'ai décidé d'embrasser un nouveau défi.<br /><br />
-          Ayant été, depuis le lycée, motivé par mon intérêt pour la programmation hérité de ma formation du baccalauréat, j'ai entrepris une reconversion professionnelle dans le développement web et mobile.<br /><br />
-          C'est l'un des meilleurs choix de ma vie, connaissant l'essor et la perpétuelle évolution du numérique.<br /><br />
-          Méticuleux, sérieux et curieux, toujours prêt à relever de nouveaux défis, cette transition vers le monde du développement web et mobile symbolise non seulement un retour à mes premières passions, mais aussi une ouverture vers de nouvelles aventures professionnelles et créatives en tant que Développeur web et mobile Junior.
+          Après près de dix ans d'expérience enrichissante dans le domaine de la finance, où j'ai collaboré avec de nombreux acteurs majeurs, j'ai décidé de relever un nouveau défi professionnel.
+          <br />
+          <br />
+          Depuis le lycée, mon intérêt pour la programmation, nourri par ma formation au baccalauréat, n'a cessé de croître. Cet enthousiasme m'a conduit à entreprendre une reconversion dans le développement web et mobile, un domaine en pleine expansion et constamment en évolution.
+          <br />
+          <br />
+          Cette décision s'est avérée être l'une des meilleures de ma vie. Rigoureux, sérieux et curieux, je suis toujours prêt à relever de nouveaux défis. Cette transition vers le développement web et mobile représente non seulement un retour à mes premières passions, mais aussi une ouverture vers de nouvelles opportunités professionnelles et créatives en tant que Développeur Web et Mobile Junior.
         </p>
-        <button className={styles.button}>
-          <a
-            href="/CV Florian Serrault.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.link}
-          >
-            Télécharger mon CV
-          </a>
-        </button>
+
+        <CButton className={styles.button} onClick={handleCVClick}>
+          Télécharger mon CV
+        </CButton>
+        
       </div>
       <div className={styles.rightContent}>
         <img src="/profiles.jpg" alt="Profile" />
