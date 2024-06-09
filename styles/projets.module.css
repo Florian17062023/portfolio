@@ -71,6 +71,8 @@
   transition: max-height 0.3s ease;
   max-height: none; /* Supprimer la hauteur maximale pour afficher tout le texte */
   white-space: pre-wrap; /* Ajout pour gérer les sauts de ligne */
+  text-align: left;
+  padding-top: 0.5rem;
 }
 
 .descriptionContainer {
