@@ -6,7 +6,7 @@ const Projets = () => {
   const items = [
     { id: 1, title: 'Mymoviz', image: '/Mymoviz.PNG', description: "My Moviz est un projet d'appel API pour l'affichage des dernières sorties.<br>Il permet à l'utilisateur d'ajouter des films à une liste de favoris et de les noter.<br><br><br>Technologies utilisées : React, Redux, API REST", url: 'https://my-moviz-three.vercel.app/' },
     { id: 2, title: 'ChelsArt', image: '/ChelsArt88.png', description: "Chels Art est un site vitrine présentant des créations crochet.<br>Les utilisateurs peuvent découvrir divers projets artistiques.<br><br><br>Technologies utilisées : Next.js, CSS, React", url: 'https://chelsart88.vercel.app/' },
-    { id: 3, title: 'CryptoDashboard', image: '/CryptoDashboard.png', description: "CryptoDashboard est une plateforme en ligne pour suivre l'évolution des portefeuilles cryptographiques,<br>offrant une vision complète des investissements.<br><br><br>Technologies utilisées : Next.js, Chart.js, MongoDB, Node.js, CSS", video: '/CryptoDashBoard.mp4' },
+    { id: 3, title: 'CryptoDashboard', image: '/CryptoDashboard.PNG', description: "CryptoDashboard est une plateforme en ligne pour suivre l'évolution des portefeuilles cryptographiques,<br>offrant une vision complète des investissements.<br><br><br>Technologies utilisées : Next.js, Chart.js, MongoDB, Node.js, CSS", video: '/CryptoDashBoard.mp4' },
     { id: 4, title: 'Locapic', image: '/locapic.PNG', description: "Le projet 'Locapic' est une application de géolocalisation qui a pour but d'enregister les différentes localisations de l'utilisateur.<br>Technologies utilisées : React Native , Redux, Express , Node JS<br><br><br>", video: '/locapic_demo.mp4' },
   ];
 
